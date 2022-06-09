@@ -15,3 +15,41 @@ Input: nums = [2,2,1,1,1,2,2]
 Output: 2
 */
 
+//* hashing (Brute force solution)
+
+class Solution {
+public:
+    int majorityElement(vector<int>& arr) {
+    unordered_map<int,int> m;
+        for(auto x : arr) {
+            m[x]++;
+            if(m[x] > arr.size()/2) {
+                return x;
+            }
+        }
+        return 0;
+    }
+};
+
+// TC = O(N)
+// SC = O(N)
+
+
+
+//* Moore's Voting algrithm (Efficient solution)
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int counter = 0, majority = 0;
+        for(int num : nums) {
+            if(counter == 0) majority = num;
+            if(num == majority) counter++;
+            else counter--;
+        }
+        return majority;
+    }
+};
+
+// TC = O(N)
+// SC = O(1)
