@@ -85,3 +85,4 @@ node* reverseKNodes(node* head,int k) {
 
 // Time Complexity: O(N) Reason: Nested iteration with O((N/k)*k) which makes it equal to O(N).
 // Space Complexity: O(1)
+
