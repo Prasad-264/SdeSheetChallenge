@@ -32,6 +32,15 @@ Explanation:
 maximum profit of 127 (100+27).
 */
 
+/*
+struct Job 
+{ 
+    int id;	 // Job Id 
+    int dead; // Deadline of job 
+    int profit; // Profit if job is over before or on deadline 
+};
+*/
+
 class Solution {
 public:
     bool static comparison(Job a, Job b) {
