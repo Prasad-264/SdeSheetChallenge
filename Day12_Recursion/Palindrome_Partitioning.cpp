@@ -21,14 +21,14 @@ private:
     
     void partition(string& s, int start, vector<string>& path, vector<vector<string>>& result) {
         int n = s.length();
-        
+
         if (start == n) {
             result.push_back(path);
             return;
         } 
         
         for(int i = start; i < n; i++) {
-            if (isPalindrome(s, start, i)) {
+            if(isPalindrome(s, start, i)) {
                 path.push_back(s.substr(start, i - start + 1));
                 partition(s, i + 1, path, result);
                 path.pop_back();  //Tode ho toh jodna to padega he...!
@@ -69,3 +69,4 @@ Reason: The space complexity can vary depending upon the length of the answer. k
     list of palindromes and if we have x such list of palindromes in our final answer. The depth of the recursion 
     tree is n, so the auxiliary space required is equal to the O(n).
 */
+
