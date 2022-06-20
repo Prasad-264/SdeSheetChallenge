@@ -88,3 +88,4 @@ vector<string> wordBreak(string &s, vector<string> &dictionary) {
     words(s, 0, dictionary, ans, curr);
     return ans;
 }
+
